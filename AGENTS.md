@@ -221,6 +221,14 @@ To verify that an AI agent (like GitHub Copilot or Claude) is correctly using th
 3. **Check Skill Content**: "Show me the checklist for verifying a new challenge."
    - *Expected Result*: The agent should find and display the content from `./.ai/skills/verify-challenge/checklists/challenge-checklist.md`.
 
+## Cursor Cloud specific instructions
+
+- Angular 22 requires Node `^22.22.3 || ^24.15.0 || >=26`. The image Node is older. This environment installs Node 24.21.0 under `/usr/local/node` and puts it first on `PATH`.
+- `.npmrc` sets `package-lock=false`. Install with `npm install`, which also builds the frontend and compiles the server.
+- The Angular application builder writes `frontend/dist/frontend/browser-stats.json`. The frontend SBOM script still reads `stats.json`, so `npm install` exits after a successful bundle. Copy `browser-stats.json` to `stats.json`, run `npm --prefix frontend run sbom`, then `npm run build:server`.
+- `npm start` serves the shop on port 3000. SQLite and MarsDB are local. `ALCHEMY_API_KEY` and an LLM at `http://localhost:11434/v1` are optional; without them the Web3 and chatbot challenges warn, and the rest of the shop still runs.
+- `npm run test:server` expects port 3000 to be free. Stop the shop before that suite.
+
 ## Remember
 
 AI agents are productivity tools for enhancing development. You (or the person reviewing the PR) are responsible for the quality, correctness, and security of all contributions. Always review AI-generated code critically, test thoroughly, and follow the project's guidelines.
