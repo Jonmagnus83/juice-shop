@@ -76,6 +76,10 @@ For a detailed introduction, full list of features and architecture overview ple
 5. Run `npm start`
 6. Browse to <http://localhost:3000>
 
+### Læringslab
+
+Kort norsk veiledning for lokal oppstart og de viktigste mappene: [docs/SETUP.md](docs/SETUP.md).
+
 ### Packaged Distributions
 
 [![GitHub release](https://img.shields.io/github/downloads/juice-shop/juice-shop/total.svg)](https://github.com/juice-shop/juice-shop/releases/latest)
