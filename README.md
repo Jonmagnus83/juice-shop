@@ -39,6 +39,7 @@ For a detailed introduction, full list of features and architecture overview ple
 
 - [Setup](#setup)
     - [From Sources](#from-sources)
+    - [Læringslab](#læringslab)
     - [Packaged Distributions](#packaged-distributions)
     - [Docker Container](#docker-container)
     - [Vagrant](#vagrant)
@@ -75,6 +76,19 @@ For a detailed introduction, full list of features and architecture overview ple
 4. Run `npm install` (only has to be done before first start or when you change the source code)
 5. Run `npm start`
 6. Browse to <http://localhost:3000>
+
+### Læringslab
+
+OWASP Juice Shop er en med vilje usikker nettbutikk for sikkerhetstrening, bevissthetsdemoer og CTF-er. For en lokal lab holder det med Node.js 22–26, deretter:
+
+```bash
+npm install
+npm start
+```
+
+Åpne <http://localhost:3000>. `npm install` bygger appen, og `npm start` kjører den ferdigbygde serveren.
+
+Når du leser koden, start i `frontend/src/` (Angular-klienten), `routes/` og `server.ts` (API), `models/` og `data/` (database og utfordringer), pluss `lib/`, `config/`, `views/` og `ftp/`. Kort kart over mappene står i [docs/SETUP.md](docs/SETUP.md).
 
 ### Packaged Distributions
 
